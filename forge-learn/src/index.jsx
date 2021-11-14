@@ -13,12 +13,15 @@ const fetchCommentsForContent = async (contentId) => {
 const App = () => {
   const context = useProductContext();
   const [comments] = useState(async () => await fetchCommentsForContent(context.contentId));
-  console.log("TEST");
+
   console.log(`Number of comments on this page: ${comments.length}`);
 
   return (
     <Fragment>
       <Text>Hello world!</Text>
+      <Text>
+        Number of comments on this page: {comments.length}
+      </Text>
     </Fragment>
   );
 };
