@@ -1,0 +1,14 @@
+modules:
+  macro:
+    - key: forge-learn-hello-world
+      function: main
+      title: Home Title
+      description: Inserts Hello world!
+  function:
+    - key: main
+      handler: index.run
+app:
+  id: ari:cloud:ecosystem::app/fda47728-64f2-47df-be69-8b2fd952281b
+permissions:
+  scopes:
+    - read:confluence-content.summary
