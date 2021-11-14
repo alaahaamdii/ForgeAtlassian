@@ -4,11 +4,32 @@ modules:
       function: main
       title: Home Title
       description: Inserts Hello world!
+    - key: giphy
+      function: main-griphy
+      title: GIPHY
+      description: View random GIPHY gifs!
+  confluence:contentBylineItem:
+    - key: forge-space-news-byline
+      function: byline
+      title: Space news
+      tooltip: Displays recent space news
+  confluence:spaceSettings:
+    - key: forge-space-news
+      function: main-space
+      title: Space news
   function:
     - key: main
       handler: index.run
+    - key: main-space
+      handler: index-space.run
+    - key: byline
+      handler: byline.run
+    - key: main-griphy
+      handler: main-griphy.run
 app:
   id: ari:cloud:ecosystem::app/fda47728-64f2-47df-be69-8b2fd952281b
 permissions:
   scopes:
+    - read:confluence-props
+    - write:confluence-props
     - read:confluence-content.summary
